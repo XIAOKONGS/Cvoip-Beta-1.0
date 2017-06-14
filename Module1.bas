@@ -1,4 +1,6 @@
 Attribute VB_Name = "Module1"
+Public Declare Function SetWindowPos Lib "user32" (ByVal hwnd As Long, ByVal hWndInsertAfter As Long, ByVal x As Long, ByVal y As Long, ByVal cx As Long, ByVal cy As Long, ByVal wFlags As Long) As Long
+    
     Public E As String
     Public str As String
     
@@ -13,10 +15,10 @@ Attribute VB_Name = "Module1"
     Public BigggHeight As String
     Public Urgent As String   '紧急呼叫号码
     
-    Public Declare Function SetWindowPos Lib "user32" (ByVal hwnd As Long, ByVal hWndInsertAfter As Long, ByVal x As Long, ByVal y As Long, ByVal cx As Long, ByVal cy As Long, ByVal wFlags As Long) As Long
+    
+'兼容不同版本的OS
 Public Function OS() As String
 
-'MsgBox SystemVer
  Dim objWMIService, colItems, objItem, strOSversion As String
     Set objWMIService = GetObject("winmgmts:\\.\root\cimv2")
     Set colItems = objWMIService.ExecQuery("Select * from Win32_OperatingSystem")
@@ -34,7 +36,7 @@ Public Function OS() As String
         Case "10.": strOSversion = "Win10"
         Case Else: strOSversion = "未知系统版本"
     End Select
-'    MsgBox "你的操作系统是：" & strOSversion
+
     OS = strOSversion
     
 End Function
@@ -46,11 +48,11 @@ Public Function NameInit()
     Dim b As String
     Dim C As String
     Dim D As String
-
-    
     Dim i As Integer
     Dim ip As Integer
     
+    
+    '通讯录不存在就这样干
     If Dir("D:" & "\myData.txt") = "" Then
     Open "d:\" & "myData.txt" For Output As #1
     Print #1, ""
@@ -65,9 +67,6 @@ Public Function NameInit()
     
     '读取紧急呼叫号码
     Urgent = GetSetting("MyApp", "setup", "Text12", Urgent)
-    
-
-
 
     Dim num1 As String
     Dim num2 As String
