@@ -179,7 +179,7 @@ Begin VB.Form Form3
          BorderColorPressed=   -2147483628
          BorderColorHover=   -2147483627
          ForeColor       =   16576
-         Caption         =   "帮助"
+         Caption         =   "在线帮助"
          BeginProperty Font {0BE35203-8F91-11CE-9DE3-00AA004BB851} 
             Name            =   "Tahoma"
             Size            =   9
@@ -503,6 +503,7 @@ Attribute VB_PredeclaredId = True
 Attribute VB_Exposed = False
 Private Sub Abutton1_Click()
 MsgBox "          号码前必须添加“9”或者 “90”", vbOKOnly, "XIAOKONGS實驗室"
+Shell "explorer.exe https://github.com/XIAOKONGS/Cvoip-Beta-1.0/wiki/"
 End Sub
 
 Private Sub Check1_Click()
@@ -573,32 +574,12 @@ Private Sub Check5_Click()
 
 MsgBox "          正在拼命研发中！！！", vbOKOnly, "XIAOKONGS實驗室"
 
-
-'    If Check5.Value Then
-'        Text9.Enabled = True
-'        Text10.Enabled = True
-'
-'       Else
-'         Text9.Enabled = False
-'         Text10.Enabled = False
-'
-'         Text9.Text = "EEE"
-'
-'    End If
-
 End Sub
-
-
 
 Private Sub Command3_Click()
 Unload Me
 End Sub
 
-''
-''Private Sub Command1_Click()
-''MsgBox "呼叫转移解除成功"
-''End Sub
-'
 Private Sub Form_Unload(Cancel As Integer)
 Form1.Show
 End Sub
@@ -661,11 +642,11 @@ If Text5.Text <> "CCC" Then Check3.value = 1
 If Text7.Text <> "DDD" Then Check4.value = 1
 If Text9.Text <> "EEE" Then Check5.value = 1
 
-
-
-
 End Sub
 
+Private Sub Label2_Click()
+Shell "explorer.exe http://xiaokongs.org"
+End Sub
 
 Private Sub Label5_Click()
 Me.Hide

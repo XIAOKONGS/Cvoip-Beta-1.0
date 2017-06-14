@@ -368,6 +368,10 @@ Private Sub Abutton1_Click()
 Unload Me
 End Sub
 
+Private Sub Abutton2_Click()
+Shell "explorer.exe http://xiaokongs.org/x/SendXiaoKongs.asp"
+End Sub
+
 Private Sub Form_Load()
 
 'MsgBox FileLen(App.path & "\" & App.EXENAME & ".exe")
@@ -460,3 +464,6 @@ Private Sub Form_Unload(Cancel As Integer)
 Form3.Show
 End Sub
 
+Private Sub Label19_Click()
+Shell "explorer.exe http://xiaokongs.org"
+End Sub

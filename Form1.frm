@@ -658,7 +658,7 @@ End If
 End Sub
 
 Private Sub Label6_Click()
-'Form2.Show
+On Error Resume Next
 Shell App.Path & "\" & "VOIP ºô³ö¼ÇÂ¼.exe"
 End Sub
 
@@ -716,8 +716,6 @@ WebBrowser1.Document.All("goto").Click
 
 
 End Sub
-
-
 
 Public Sub CallSB(Number As String)
 

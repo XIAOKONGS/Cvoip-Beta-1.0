@@ -1,19 +1,19 @@
 Attribute VB_Name = "Module1"
+Option Explicit
+
 Public Declare Function SetWindowPos Lib "user32" (ByVal hwnd As Long, ByVal hWndInsertAfter As Long, ByVal x As Long, ByVal y As Long, ByVal cx As Long, ByVal cy As Long, ByVal wFlags As Long) As Long
-    
-    Public E As String
-    Public str As String
-    
-    Type stafftype
+Public E As String
+Public str As String
+Type stafftype
         num As Integer
         Name As String * 10
         IDC As String * 11
         Location As String * 6
-    End Type
+End Type
     
-    Public SmallHeight As String
-    Public BigggHeight As String
-    Public Urgent As String   '½ô¼±ºô½ÐºÅÂë
+Public SmallHeight As String
+Public BigggHeight As String
+Public Urgent As String   '½ô¼±ºô½ÐºÅÂëStr
     
     
 '¼æÈÝ²»Í¬°æ±¾µÄOS
@@ -26,7 +26,7 @@ Public Function OS() As String
         strOSversion = objItem.version
     Next
     Select Case Left(strOSversion, 3)
-        Case "5.2": strOSversion = "Windows Server 2003": SmallHeight = 2850: BigggHeight = 4390: Form1.Height = SmallHeight: Form1.Combo1.BackColor = &H8000000E: Form1.Label4.Top = 2030: Form1.Label10.Top = 2150
+        Case "5.2": strOSversion = "Windows Server 2003": SmallHeight = 2880: BigggHeight = 4390: Form1.Height = SmallHeight: Form1.Combo1.BackColor = &H8000000E: Form1.Label4.Top = 2030: Form1.Label10.Top = 2150
         Case "5.0": strOSversion = "Windows 2000"
         Case "5.1": strOSversion = "Windows XP": Form1.BorderStyle = 3: SmallHeight = 2800: BigggHeight = 4300: Form1.Height = SmallHeight: Form1.Combo1.BackColor = &H8000000E: Form1.Label4.Top = 2100
         Case "6.0": strOSversion = "windows vista"
