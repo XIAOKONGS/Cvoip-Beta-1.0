@@ -1,0 +1,10 @@
+行 27: 控件 Abutton1 的类 SystemANTI.Abutton 不是一个已加载的控件类。
+行 33: 属性名 _ExtentX 在 Abutton1 中是无效的。
+行 34: 属性名 _ExtentY 在 Abutton1 中是无效的。
+行 35: 属性名 ButtonStyle 在 Abutton1 中是无效的。
+行 37: 属性名 BackColorPressed 在 Abutton1 中是无效的。
+行 38: 属性名 BackColorHover 在 Abutton1 中是无效的。
+行 39: 属性名 BorderColor 在 Abutton1 中是无效的。
+行 40: 属性名 BorderColorPressed 在 Abutton1 中是无效的。
+行 41: 属性名 BorderColorHover 在 Abutton1 中是无效的。
+行 42: 属性名 Caption 在 Abutton1 中是无效的。
